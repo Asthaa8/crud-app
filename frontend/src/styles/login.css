@@ -1,0 +1,125 @@
+.login-page {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 2.25rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.login-header h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.login-header p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.login-switcher {
+  display: flex;
+  margin: 1.5rem 0 1rem;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.switch-btn {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.switch-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.login-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.login-field label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.login-field input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: white;
+}
+
+.login-field input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.login-error,
+.login-success {
+  padding: 1rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.login-error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.login-success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.login-submit {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .login-card {
+    padding: 1.75rem;
+  }
+
+  .login-header h2 {
+    font-size: 1.65rem;
+  }
+
+  .login-switcher {
+    flex-direction: column;
+  }
+
+  .switch-btn {
+    width: 100%;
+  }
+}
